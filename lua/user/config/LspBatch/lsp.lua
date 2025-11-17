@@ -58,12 +58,62 @@ local servers = {
     -- Web
     html          = { cmd = { "vscode-html-language-server", "--stdio" }, filetypes = { "html" } },
     cssls         = { cmd = { "vscode-css-language-server", "--stdio" }, filetypes = { "css", "scss", "less" } },
-    tsserver      = { cmd = { "typescript-language-server", "--stdio" },
-                    filetypes = { "javascript", "typescript" },},
-    eslint        = { cmd = { "vscode-eslint-language-server", "--stdio" },
-                    filetypes = { "javascript", "typescript" },},
+--    tsserver      = { cmd = { "typescript-language-server", "--stdio" }, filetypes = { "javascript", "typescript" },},
+--    eslint        = { cmd = { "vscode-eslint-language-server", "--stdio" }, filetypes = { "javascript", }},
+--    biome = { cmd = { "biome", "lsp-proxy" }, filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "jsonc" },},
+vtsls = {
+  cmd = { "vtsls", "--stdio" },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  },
+  -- This makes it work for ANY JS/TS file, even standalone ones
+  settings = {
+    vtsls = {
+      autoUseWorkspaceTsdk = true,
+      experimental = {
+        completion = {
+          enableServerSideFuzzyMatch = true,
+        },
+      },
+    },
+    typescript = {
+      updateImportsOnFileMove = { enabled = "always" },
+      suggest = {
+        completeFunctionCalls = true,
+      },
+      inlayHints = {
+        parameterNames = { enabled = "literals" },
+        parameterTypes = { enabled = true },
+        variableTypes = { enabled = true },
+        propertyDeclarationTypes = { enabled = true },
+        functionLikeReturnTypes = { enabled = true },
+        enumMemberValues = { enabled = true },
+      },
+    },
+    javascript = {
+      updateImportsOnFileMove = { enabled = "always" },
+      suggest = {
+        completeFunctionCalls = true,
+      },
+      inlayHints = {
+        parameterNames = { enabled = "literals" },
+        parameterTypes = { enabled = true },
+        variableTypes = { enabled = true },
+        propertyDeclarationTypes = { enabled = true },
+        functionLikeReturnTypes = { enabled = true },
+        enumMemberValues = { enabled = true },
+      },
+    },
+  },
+  flags = {
+    debounce_text_changes = 50,
+  },
+},
 
-    -- System
+   -- System
     clangd        = { cmd = { "clangd", "--background-index" }, filetypes = { "c", "cpp" } },
     asm_lsp       = { cmd = { "asm-lsp" }, filetypes = { "asm", "s" } },
     cmake         = { cmd = { "cmake-language-server" }, filetypes = { "cmake" } },

@@ -413,13 +413,30 @@ spec = {
   dependencies = {
     "rafamadriz/friendly-snippets", -- Optional: pre-made snippets
   },
+  {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end,
+  },
+  {
+  "kdheepak/lazygit.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  config = function()
+    -- Set keybinding
+    vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+  end,
 },
+
+}, -- NOTE: Closing brace for spec table!!!!!!
 
 
 
 
 -- ==============================================================
--- Configuration for Lazy nvim Keep Plugins below this Comment !
+-- Configuration for Lazy nvim Keep Plugins above this Comment !
 -- ==============================================================
 
 
