@@ -20,6 +20,27 @@ vim.cmd("filetype plugin indent on")
 vim.o.showtabline = 2
 
 -- ======================
+-- Faster Movement !
+-- ======================
+vim.opt.timeoutlen = 200
+vim.opt.updatetime = 100
+vim.opt.ttimeoutlen = 10
+vim.opt.lazyredraw = false -- keep off 
+vim.opt.ttyfast = true
+
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+
+vim.opt.smartindent = true
+
+vim.opt.backspace = { "indent", "eol", "start" }
+
+
+
+-- ======================
 -- Session Requirements
 -- ======================
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
