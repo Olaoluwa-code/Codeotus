@@ -4,11 +4,15 @@
 -- Pure vim.lsp.config + vim.lsp.enable (no lspconfig)
 -- =====================================================
 
+-- ===============================
 -- 0. Disable line numbers
+-- ===============================
 vim.wo.number = false
 vim.wo.relativenumber = false
 
+-- ===============================
 -- 1. on_attach: keymaps
+-- ===============================
 local function on_attach(_, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
     local map = vim.keymap.set
@@ -34,19 +38,25 @@ cmp.setup({
     { name = "path" },
   })
 })
+-- ===============================
 -- 2. Capabilities (for cmp-nvim-lsp)
+-- ===============================
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 pcall(function()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 end)
 
+-- ===============================
 -- 3. Default config
+-- ===============================
 local default_config = {
     on_attach = on_attach,
     capabilities = capabilities,
 }
 
+-- ===============================
 -- 4. Servers
+-- ===============================
 local servers = {
     -- Core
     bashls        = { cmd = { "bash-language-server", "start" }, filetypes = { "sh", "bash" } },
@@ -220,6 +230,16 @@ vtsls = {
   },
 },
     phpactor      = { cmd = { "phpactor", "language-server" }, filetypes = { "php" } },
+
+-- ===============================
+-- NOTE: Better to write your configs behind this Note! 
+-- Plese Do add comma (,) after your configuration !
+-- Don't damage configuration if they are working !
+-- ===============================
+
+
+
+    -- WARN: Do this yourself as per your Godot Editor 
     GDScript = {
   cmd = { "nc", "127.0.0.1", "6008" },
   filetypes = { "gd", "gdscript" },
@@ -228,11 +248,69 @@ vtsls = {
   end,
 
 }
-}
+}-- NOTE: STAY BEHIND THIS BRACKET FOR SERVER CONFIGURATIONS !
 
-    -- Some Godot!
+-- ===============================
+-- Hover Text :WARN: Do at your own Risk 
+-- ===============================
 
--- 5. Setup all
+-- -- Disable automatic hover in insert mode
+-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+--   vim.lsp.handlers.hover, {
+--     -- Only show hover when explicitly called (via K keymap)
+--     silent = true,
+--   }
+-- )
+--
+-- -- Disable signature help popup in insert mode
+-- vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+--   vim.lsp.handlers.signature_help, {
+--     silent = true,
+--     focusable = false,
+--   }
+-- )
+--
+-- -- IMPORTANT: Disable automatic hover triggering
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function()
+--     -- Do nothing - prevents auto-hover
+--   end
+-- })
+--
+-- -- Also disable CursorHoldI (insert mode)
+-- vim.api.nvim_create_autocmd("CursorHoldI", {
+--   callback = function()
+--     -- Do nothing - prevents auto-hover in insert mode
+--   end
+-- })
+
+-- ===============================
+-- Disable automatic signature help
+-- ===============================
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, {
+    border = "rounded",
+    silent = true,
+    focusable = false,
+  }
+)
+
+-- Remove automatic triggering characters
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client.server_capabilities.signatureHelpProvider then
+      client.server_capabilities.signatureHelpProvider.triggerCharacters = {}
+    end
+  end,
+})
+
+-- Add manual keybind (optional - trigger with <C-k> in insert mode)
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Help" })
+
+-- ===============================
+-- Setup all Servers
+-- ===============================
 for server, opts in pairs(servers) do
     vim.lsp.config(server, vim.tbl_deep_extend("force", default_config, opts))
 end
@@ -246,3 +324,6 @@ vim.cmd [[
     colorscheme desert
     highlight Normal guibg=NONE ctermbg=NONE
 ]]
+
+
+
