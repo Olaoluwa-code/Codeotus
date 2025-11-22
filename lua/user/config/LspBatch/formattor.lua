@@ -1,1 +1,0 @@
----Add Auto Fomat if you have your monitor screen biggrem than your house wall. 

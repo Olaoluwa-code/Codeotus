@@ -70,8 +70,8 @@ spec = {
     {"kylechui/nvim-surround", event = "VeryLazy" , config = true},
     -- Your Plugins here
 
-    -- ==== Formatter (Not Good for Humans)
-    --{ "stevearc/conform.nvim",       event = "BufWritePre" },
+    
+    { "stevearc/conform.nvim",       event = "BufWritePre" },
 
     -- ===== Statusline
     { "nvim-lualine/lualine.nvim",   dependencies = { "nvim-tree/nvim-web-devicons" } },
@@ -430,6 +430,18 @@ spec = {
 },
 
     {"nvzone/showkeys"}, {"stevearc/resession.nvim"}, {"stevearc/overseer.nvim"},
+
+    {
+    'stevearc/oil.nvim',
+  ---@module 'oil' 
+  ---@type oil.SetupOpts
+  opts = {},
+  -- Optional dependencies
+  dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+  lazy = false,
+}
 
 
 

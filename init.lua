@@ -60,7 +60,8 @@ safe_require("user.UI.SetGlobalTheme")
 safe_require("user.config.LspBatch.lsp")
 safe_require("user.config.LspBatch.cmp")
 safe_require("user.config.LspBatch.autopairs")
-safe_require("user.config.LspBatch.formattor")
+safe_require("user.config.LspBatch.formatter")
+
 safe_require("user.config.IdeBatch.nvimtree")
 safe_require("user.config.IdeBatch.telescope")
 safe_require("user.config.IdeBatch.toggleterm")
@@ -76,6 +77,7 @@ safe_require("user.config.IdeBatch.multiselect")
 safe_require("user.config.IdeBatch.treesitter")
 safe_require("user.config.IdeBatch.showkey")
 safe_require("user.config.IdeBatch.surround")
+safe_require("user.config.IdeBatch.oil")
 safe_require("user.config.LspBatch.luasnip")
 
 -- ============= ============= ============= ============= 
