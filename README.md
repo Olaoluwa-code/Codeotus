@@ -1,47 +1,55 @@
 # 🚀 nvrush
-
 <p align="center">
   <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugins?style=for-the-badge&colorA=1e1e2e&colorB=ff79c6" alt="Plugins">
+    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugins?style=flat-square&colorA=1e1e2e&colorB=89b4fa" alt="Plugins">
   </a>
   <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/leaderkey?style=for-the-badge&colorA=1e1e2e&colorB=8be9fd" alt="Leader Key">
+    <img src="https://dotfyle.com/nvrush/nvrush/badges/leaderkey?style=flat-square&colorA=1e1e2e&colorB=f38ba8" alt="Leader Key">
   </a>
   <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugin-manager?style=for-the-badge&colorA=1e1e2e&colorB=50fa7b" alt="Plugin Manager">
+    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugin-manager?style=flat-square&colorA=1e1e2e&colorB=a6e3a1" alt="Plugin Manager">
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.10+-ff5555?style=for-the-badge&logo=neovim&logoColor=white&color=282a36&labelColor=282a36" alt="Neovim">
-  <img src="https://img.shields.io/badge/Lua-5.1+-8be9fd?style=for-the-badge&logo=lua&logoColor=white&color=282a36&labelColor=282a36" alt="Lua">
-  <img src="https://img.shields.io/badge/Lazy.nvim-Plugin_Manager-f1fa8c?style=for-the-badge&logo=neovim&logoColor=282a36&color=282a36&labelColor=282a36" alt="Lazy">
+  <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Neovim">
+  <img src="https://img.shields.io/badge/License-MIT-89b4fa?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/stars/nvrush/nvrush?style=flat-square&color=f9e2af&logo=github&logoColor=white" alt="Stars">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/NvChad-Inspired-ff79c6?style=for-the-badge&logo=neovim&logoColor=white&color=282a36&labelColor=282a36" alt="NvChad">
-  <img src="https://img.shields.io/badge/LunarVim-Compatible-8be9fd?style=for-the-badge&logo=vim&logoColor=white&color=282a36&labelColor=282a36" alt="LunarVim">
-  <img src="https://img.shields.io/badge/LazyVim-Structure-50fa7b?style=for-the-badge&logo=neovim&logoColor=282a36&color=282a36&labelColor=282a36" alt="LazyVim">
-</p>
+---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-ffb86c?style=for-the-badge&color=282a36&labelColor=282a36" alt="License">
-  <img src="https://img.shields.io/github/stars/nvrush/nvrush?style=for-the-badge&color=ff79c6&labelColor=282a36" alt="Stars">
-  <img src="https://img.shields.io/github/forks/nvrush/nvrush?style=for-the-badge&color=8be9fd&labelColor=282a36" alt="Forks">
-  <img src="https://img.shields.io/github/issues/nvrush/nvrush?style=for-the-badge&color=50fa7b&labelColor=282a36" alt="Issues">
-</p>
+## 📸 Showcase
 
-<video width="600" controls autoplay muted loop>
-  <source src="https://github.com/user/nvrush/nvrush/releases/download/Nvrush/NvRush.mp4" type="video/mp4">
+![Screenshot_20251125_072755](https://github.com/user-attachments/assets/b0ad4069-4c9e-40f7-a000-423205d2420e)
+
+
+
+## 🎥 Demo
+
+<div align="center">
+
+https://github.com/user-attachments/assets/2bf4fef8-e6bf-496b-9b17-52e9b3fd31de
+
+</div>
+
+> **✨ Experience nvrush in action** - Smooth navigation, powerful features, and a beautiful interface
+<div align="center">
+
+<video controls autoplay muted loop style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  <source src="https://raw.githubusercontent.com/username/repo/branch/assets/video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
+</div>
+
+
 [![Dotfyle Stats](https://dotfyle.com/plugins/<nvrush>/<nvrush>/shield)](https://dotfyle.com/plugins/<nvrush>/<nvrush>)
-![Screenshot_20251125_072755](https://github.com/user-attachments/assets/87cdf801-daf6-4f82-8ae3-a89199a1566c)
-![Screenshot_20251125_071550](https://github.com/user-attachments/assets/9d554a5a-e4ef-42df-b4c8-d32a7ecd9779)
-![Screenshot_20251125_072511](https://github.com/user-attachments/assets/775e5efa-9550-4a83-9856-2017843e15d0)
-![Screenshot_20251125_072049](https://github.com/user-attachments/assets/69f55bea-2a50-48cd-8699-5224a57803b5)
-![Screenshot_20251125_071340](https://github.com/user-attachments/assets/29c00f8f-cb6b-4fc6-9049-10bac8e5ce22)
+
+
+
+
+
 
 
 ## Install Instructions
