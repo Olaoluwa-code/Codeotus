@@ -1,25 +1,5 @@
-# nvrush
-
-<p align="center">
-  <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugins?style=flat-square&colorA=1e1e2e&colorB=89b4fa" alt="Plugins">
-  </a>
-  <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/leaderkey?style=flat-square&colorA=1e1e2e&colorB=f38ba8" alt="Leader Key">
-  </a>
-  <a href="https://dotfyle.com/nvrush/nvrush">
-    <img src="https://dotfyle.com/nvrush/nvrush/badges/plugin-manager?style=flat-square&colorA=1e1e2e&colorB=a6e3a1" alt="Plugin Manager">
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Neovim">
-  <img src="https://img.shields.io/badge/License-MIT-89b4fa?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/stars/nvrush/nvrush?style=flat-square&color=f9e2af&logo=github&logoColor=white" alt="Stars">
-</p>
-
-<div align="center">
-
+# NvRush
+<video src="https://github.com/user-attachments/assets/65301e67-8b47-4cf6-b998-cde671436aa7" autoplay loop muted playsinline></video>
 https://github.com/user-attachments/assets/65301e67-8b47-4cf6-b998-cde671436aa7
 
 ![Screenshot_20251125_072755](https://github.com/user-attachments/assets/b0ad4069-4c9e-40f7-a000-423205d2420e)
