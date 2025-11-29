@@ -78,16 +78,16 @@ require("lazy").setup({
         --        { "folke/snacks.nvim",                   version = "*", lazy = false, },
         --        { "folke/noice.nvim" },
         { "echasnovski/mini.icons",              version = false,                        lazy = true, },
-        { "stevearc/dressing.nvim" },
-        { "beauwilliams/focus.nvim" },
-        { "rcarriga/nvim-notify" },
-        { "nvim-treesitter/nvim-treesitter",     build = ":TSUpdate" },
-        { "lukas-reineke/indent-blankline.nvim", main = "ibl",                           event = { "BufReadPost", "BufNewFile" } },
-        { "akinsho/bufferline.nvim",             version = "*",                          event = "VeryLazy", },
-        { "nvim-tree/nvim-tree.lua",             version = "*", },
-        { "hrsh7th/nvim-cmp" },
-        { "windwp/nvim-autopairs",               event = "InsertEnter" },
-        { "kylechui/nvim-surround",              event = "VeryLazy",                     config = true },
+        { "stevearc/dressing.nvim",              version = "v3.1.1", },
+        { "beauwilliams/focus.nvim",             version = "v1.0.2", },
+        { "rcarriga/nvim-notify",                version = "v3.15.0", },
+        { "nvim-treesitter/nvim-treesitter",     build = ":TSUpdate",                    version = "v0.10.0", },
+        { "lukas-reineke/indent-blankline.nvim", main = "ibl",                           event = { "BufReadPost", "BufNewFile" }, version = "v3.9.0", },
+        { "akinsho/bufferline.nvim",             version = "v4.9.1",                     event = "VeryLazy", },
+        { "nvim-tree/nvim-tree.lua",             version = "v1.14.0", },
+        { "hrsh7th/nvim-cmp", }, -- :NOTE: Let it be as it is !
+        { "windwp/nvim-autopairs",               event = "InsertEnter",                  version = "0.10.0" },
+        { "kylechui/nvim-surround",              event = "VeryLazy",                     version = "v3.1.7",                      config = true },
         { "stevearc/conform.nvim",               event = "BufWritePre" },
         { "nvim-lualine/lualine.nvim" },
         { "mfussenegger/nvim-dap" },
@@ -99,35 +99,33 @@ require("lazy").setup({
         -- =========================
         -- Lsp Only
         -- =========================
-        { "neovim/nvim-lspconfig",               event = { "BufReadPre", "BufNewFile" }, },
-        { "L3MON4D3/LuaSnip",                    lazy = true },
-        { "akinsho/toggleterm.nvim",             version = "*" },
-        { "folke/trouble.nvim",                  branch = "main", },
-        { "folke/todo-comments.nvim" },
-        { "ThePrimeagen/refactoring.nvim" },
-        { "mfussenegger/nvim-dap" },
-        { "onsails/lspkind-nvim" },
-        { "SmiteshP/nvim-navic",                 lazy = true },
-        { "L3MON4D3/LuaSnip",                    version = "v2.*",                       build = "make install_jsregexp" },
-        { "saghen/blink.cmp",                    version = "*" },
+        { "neovim/nvim-lspconfig",               event = { "BufReadPre", "BufNewFile" }, version = "v2.5.0" },
+        { "L3MON4D3/LuaSnip",                    lazy = true,                            version = "v2.4.1" },
+        { "akinsho/toggleterm.nvim",             version = "v2.13.1" },
+        { "folke/trouble.nvim",                  branch = "main",                        version = "v3.7.1" },
+        { "folke/todo-comments.nvim",            version = "v1.5.0" },
+        { "ThePrimeagen/refactoring.nvim", },
+        { "mfussenegger/nvim-dap",               version = "0.10.0" }, -- WARN: without v
+        { "onsails/lspkind-nvim" },                                    --FIX: Give a working copy
+        { "SmiteshP/nvim-navic",                 lazy = true },        --FIX: Give a working copy
+
+        { "saghen/blink.cmp",                    version = "v1.8.0" },
 
         -- =========================
-        -- Sessions & workspace
+        -- Sessions & projects
         -- =========================
-        { "stevearc/resession.nvim" },
-        { "rmagatti/auto-session" },
-        { "natecraddock/workspaces.nvim" },
-        { "ahmedkhalf/project.nvim" },
+        { "stevearc/resession.nvim",             version = "v1.2.1" },
+        { "ahmedkhalf/project.nvim" }, --FIX: Give a copy.
 
         -- =========================
         -- Daily usefull
         -- =========================
-        { "folke/which-key.nvim",                event = "VeryLazy", },
-        { "karb94/neoscroll.nvim",               config = true },
-        { "mg979/vim-visual-multi",              branch = "master" },
-        { 'numToStr/Comment.nvim' },
-        { "kdheepak/lazygit.nvim" },
-        { "echasnovski/mini.nvim",               version = "*" },
+        { "folke/which-key.nvim",                event = "VeryLazy",                     version = "v3.17.0" },
+        { "karb94/neoscroll.nvim",               config = true,                          version = "0.2.0" }, -- WARN: without v
+        { "mg979/vim-visual-multi",              branch = "master",                      version = "v0.5.8" },
+        { "numToStr/Comment.nvim",               version = "v0.8.0" },
+        { "kdheepak/lazygit.nvim" },                              -- NOTE: Let it be free of version lock.
+        { "echasnovski/mini.nvim",               version = "*" }, --NOTE: Let it be free of vetsion lock.
         { "nvzone/showkeys" },
 
         -- =========================
@@ -135,7 +133,7 @@ require("lazy").setup({
         -- =========================
         { "ThePrimeagen/harpoon",                branch = "harpoon2" },
         { "nvim-telescope/telescope.nvim",       tag = "0.1.5" },
-        { "nvim-neo-tree/neo-tree.nvim",         branch = "v3.x" },
+        { "nvim-neo-tree/neo-tree.nvim", },
         { "leath-dub/snipe.nvim" },
         { "otavioschwanck/arrow.nvim", },
         {
@@ -145,12 +143,13 @@ require("lazy").setup({
             opts = {},
             -- Optional dependencies
             dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-            lazy = false,
+            lazy = true,
+            version = "v2.15.0",
         },
         -- =========================
         -- Colorscheme
         -- =========================
-        { "ellisonleao/gruvbox.nvim",        name = "gruvbox-ellison" },
+        { "ellisonleao/gruvbox.nvim",        name = "gruvbox-ellison",         lazy = false, },
         { "projekt0n/github-nvim-theme",     name = "github-theme" },
         { "lunarvim/colorschemes" }, -- LunarVim’s default colorscheme collection
         { "folke/tokyonight.nvim" },
@@ -167,7 +166,7 @@ require("lazy").setup({
         { "sainnhe/sonokai",                 name = "sonokai-sainnhe" },
         { "tiagovla/tokyodark.nvim",         name = "tokyodark-tiagovla" },
         { "savq/melange-nvim",               name = "melange-warm-savq" },
-        { "rmehri01/onenord.nvim",           name = "onenord-rmehri01" },
+        { "rmehri01/onenord.nvim",           name = "onenord-rmehri01",        lazy = false, },
         { "olivercederborg/poimandres.nvim", name = "poimanders.nvim" },
         { "AlexvZyl/nordic.nvim",            name = "nordic-Alexy" },
         { "NvChad/nvim-base16.lua" }, -- Define yourself
@@ -216,7 +215,7 @@ require("lazy").setup({
     },
 
     defaults = {
-        lazy = false,
+        -- lazy = false,
         version = false,
     },
     -- ===============================

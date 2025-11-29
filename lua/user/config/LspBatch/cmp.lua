@@ -49,7 +49,7 @@ cmp.setup({
             col_offset = -3,
             side_padding = 1,
             scrollbar = true, -- Enable scrollbar
-            max_height = 5, -- Show 5 items at once
+            max_height = 5,   -- Show 5 items at once
         },
         documentation = {
             border = 'rounded',
@@ -65,45 +65,42 @@ cmp.setup({
         format = function(entry, vim_item)
             -- Beautiful Nerd Font icons for each completion kind
             local kind_icons = {
-                Text = '󰉿',
-                Method = '󰆧',
-                Function = '󰊕',
-                Constructor = '',
-                Field = '󰜢',
-                Variable = '󰀫',
-                Class = '󰠱',
-                Interface = '',
-                Module = '',
-                Property = '󰜢',
-                Unit = '󰑭',
-                Value = '󰎠',
-                Enum = '',
-                Keyword = '󰌋',
-                Snippet = '',
-                Color = '󰏌',
-                File = '󰈙',
-                Reference = '󰈇',
-                Folder = '󰉋',
-                EnumMember = '',
-                Constant = '󰏿',
-                Struct = '󰙅',
-                Event = '',
-                Operator = '󰆕',
-                TypeParameter = '',
+                Text          = '󰉿',
+                Method        = '󰆧',
+                Function      = '󰊕',
+                Constructor   = '󰡱',
+                Field         = '󰜢',
+                Variable      = '󰀫',
+                Class         = '󰠱',
+                Interface     = '󰜰',
+                Module        = '󰏗',
+                Property      = '󰜢',
+                Unit          = '󰑭',
+                Value         = '󰎠',
+                Enum          = '󰦨',
+                Keyword       = '󰌋',
+                Snippet       = '󰅱',
+                Color         = '󰏌',
+                File          = '󰈙',
+                Reference     = '󰈇',
+                Folder        = '󰉋',
+                EnumMember    = '󰦨',
+                Constant      = '󰏿',
+                Struct        = '󰙅',
+                Event         = '󱐋',
+                Operator      = '󰆕',
+                TypeParameter = '󰊄',
             }
-
             -- Add beautiful icon before the item
             vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind] or '', vim_item.kind)
 
-            -- Show source name with icons
             local source_icons = {
-                nvim_lsp = '  ',
-                luasnip = '  ',
-                buffer = '  ',
-                path = '  ',
-                cmdline = '  ',
+                nvim_lsp = '󰒓 ', -- LSP
+                luasnip  = '󰩫 ', -- Snippets
+                buffer   = '󰦪 ', -- Buffer / file text
+                path     = '󰉋 ', -- File / folder path
+                cmdline  = ' ', -- Command line
             }
-
             vim_item.menu = source_icons[entry.source.name] or ''
 
             return vim_item
@@ -120,15 +117,16 @@ cmp.setup({
 
     -- Ghost text
     experimental = {
-        ghost_text = {
-            hl_group = 'Comment',
-        },
+        ghost_text = false,
+        -- ghost_text = {
+        --     hl_group = 'Comment',
+        -- },
     },
 
     -- Performance optimization
     performance = {
-        debounce = 50,      -- Fast debounce (50ms)
-        throttle = 30,      -- Fast throttle (30ms)
+        debounce = 50,          -- Fast debounce (50ms)
+        throttle = 30,          -- Fast throttle (30ms)
         fetching_timeout = 200, -- Quick timeout
         max_view_entries = 200, -- Allow more items for scrolling
     },
@@ -215,10 +213,10 @@ cmp.setup({
 -- Command-line completion for '/' and '?'
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline({
-        ['<Up>'] = { c = cmp.mapping.select_prev_item() },
-        ['<Down>'] = { c = cmp.mapping.select_next_item() },
-        ['<Tab>'] = { c = cmp.mapping.select_next_item() },
-        ['<S-Tab>'] = { c = cmp.mapping.select_prev_item() },
+        ['<Up>'] = { c = cmp.mapping.select_next_item() },
+        ['<Down>'] = { c = cmp.mapping.select_prev_item() },
+        ['<Tab>'] = { c = cmp.mapping.select_prev_item() },
+        ['<S-Tab>'] = { c = cmp.mapping.select_next_item() },
         ['<CR>'] = { c = cmp.mapping.confirm({ select = false }) },
     }),
     sources = {
@@ -242,10 +240,10 @@ cmp.setup.cmdline({ '/', '?' }, {
 -- Command-line completion for ':'
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline({
-        ['<Up>'] = { c = cmp.mapping.select_prev_item() },
-        ['<Down>'] = { c = cmp.mapping.select_next_item() },
-        ['<Tab>'] = { c = cmp.mapping.select_next_item() },
-        ['<S-Tab>'] = { c = cmp.mapping.select_prev_item() },
+        ['<Up>'] = { c = cmp.mapping.select_next_item() },
+        ['<Down>'] = { c = cmp.mapping.select_prev_item() },
+        ['<Tab>'] = { c = cmp.mapping.select_prev_item() },
+        ['<S-Tab>'] = { c = cmp.mapping.select_next_item() },
         ['<CR>'] = { c = cmp.mapping.confirm({ select = false }) },
     }),
     sources = cmp.config.sources({

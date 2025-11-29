@@ -77,7 +77,7 @@ safe_require("user.config.LspBatch.formatter")
 safe_require("user.config.IdeBatch.nvimtree")
 safe_require("user.config.IdeBatch.telescope")
 safe_require("user.config.IdeBatch.toggleterm")
-safe_require("user.config.IdeBatch.workspace")
+safe_require("user.config.IdeBatch.project")
 safe_require("user.config.IdeBatch.sessions")
 safe_require("user.config.LspBatch.trouble")
 safe_require("user.config.IdeBatch.harpoon")
@@ -145,14 +145,6 @@ vim.g.gruvbox_material_ui_contrast = "low"        -- options: low | high
 vim.g.gruvbox_material_transparent_background = 0 -- set to 1 for transparent
 
 
--- Default nord by shaunsingh
--- Example config in lua
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_disable_background = false
-vim.g.nord_italic = false
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = false
 
 
 --
@@ -160,4 +152,4 @@ vim.g.nord_bold = false
 -- Load the colorscheme at last !
 -- NOTE: SGT colorsheme_name will override
 -- ============= ============= ============= ============= =============
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("onenord")
