@@ -66,6 +66,7 @@ safe_require("user.UI.ascii")
 safe_require("user.Mini.mini_surround")
 safe_require("user.Mini.mini_notify")
 safe_require("user.Mini.mini_icons")
+safe_require("user.Mini.mini_animate")
 
 
 -- ============= ============= ============= =============
