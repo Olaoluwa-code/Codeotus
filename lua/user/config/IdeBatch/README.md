@@ -12,3 +12,5 @@ The IdeBatch does have two files to make your workflow easy if working with c/cp
 3. If you called some libs that are not in your system then the compilation will fail so you have to manage libraries yourself.
 
 4. It is better to use only best compilers for e.g Gcc/G++ or Clang/Clang++ or rust_analyzer instead of any random compiler.
+
+5. Add you command in cos for e.g rust = ".....", and call the file type inside croc.

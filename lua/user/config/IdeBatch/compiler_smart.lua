@@ -36,7 +36,9 @@ function M.get_command(lang)
         end,
 
         -- Other languages (no libs needed)
-        rust = "cd $dir && rustc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+        -- rust = "cd $dir && rustc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+        rust =
+        'cd $dir && [ -f Cargo.toml ] && cargo run || (rustc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt)',
         go = "go run",
         python = "python3 -u",
         javascript = "node",

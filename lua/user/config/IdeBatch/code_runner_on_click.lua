@@ -22,5 +22,3 @@ require("code_runner").setup({
 })
 
 vim.keymap.set("n", "<leader>zz", ":RunCode<CR>", { desc = "Run Code" })
-vim.keymap.set("n", "<leader>rf", ":RunFile<CR>", { desc = "Run File" })
-vim.keymap.set("n", "<leader>rc", ":RunClose<CR>", { desc = "Close Runner" })
